@@ -1,10 +1,10 @@
-#DNSFW FOR BIND
+# DNSFW FOR BIND
 
-##Overview
+## Overview
 easy setup of BIND to integrate with ThreatSTOP using Docker.
 this container image built on CentOS7.
 
-##Installation
+## Installation
 ```
 $ git clone https://github.com/rkatogit/dnsfw-docker.git 
 ```
@@ -24,9 +24,9 @@ execute setup script.
 ```
 $ ./setup.sh 
 ```
-##Usage
+## Usage
 use as DNS cache server(Forwarder).
-###Check
+### Check
 ```
 $ dig @127.0.0.1 bad.threatstop.com         
 
@@ -50,13 +50,13 @@ RPZ log file
 30-Oct-2018 04:53:40.564 rpz: info: client 127.0.0.1#40466 (bad.threatstop.com): rpz QNAME NXDOMAIN rewrite bad.threatstop.com via bad.threatstop.com.basic-dnsfw.rpz.threatstop.local
 ```
 
-##Tips
+## Tips
 Output Zone file content as text
 ```
 $ dig @192.124.129.51 -t axfr -y <TSIG Key>:<TSIG Key Secret> <ZONE> AXFR > output
 ```
 
-##Others
+## Others
 Zone file
 /var/named/slaves/<ZONE>
 
@@ -69,4 +69,6 @@ zone "Basic-DNSFW.rpz.threatstop.local" {
     file "slaves/Basic-DNSFW.rpz.threatstop.local";
 };
 ```
-
+## Link
+[ThreatSTOP documentation](https://docs.threatstop.com/bind9_redhat.html)
+[NVC](https://www.nvc.co.jp)
