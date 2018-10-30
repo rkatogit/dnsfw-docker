@@ -57,10 +57,11 @@ $ dig @192.124.129.51 -t axfr -y <TSIG Key>:<TSIG Key Secret> <ZONE> AXFR > outp
 ```
 
 ## Others
-Zone file
-/var/named/slaves/<ZONE>
+Zone file  
+/var/named/slaves/ZONE
 
 Change Zone tranfers from binary to text.
+edit /etc/threatstop.rpz.conf
 ```
 zone "Basic-DNSFW.rpz.threatstop.local" {
     type slave;
