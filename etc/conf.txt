@@ -1,0 +1,3 @@
+TSIGKEY="HOGE"
+TSIGSECRET="FUGA"
+ZONE="moge.threatstop.local"
