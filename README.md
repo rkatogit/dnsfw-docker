@@ -5,11 +5,9 @@ easy setup of BIND to integrate with ThreatSTOP using Docker.
 this container image built on CentOS7.
 
 ## Installation
-```
-$ git clone https://github.com/rkatogit/dnsfw-docker.git 
-```
 
 ```
+$ cd /dnsfw-docker
 $ docker build -t bind:1 .
 $ docker run -p 53:53 -d --privileged --name bind_ts bind:1 /sbin/init
 $ docker exec -it bind_ts /bin/bash
@@ -73,3 +71,4 @@ zone "Basic-DNSFW.rpz.threatstop.local" {
 ## Link
 [ThreatSTOP documentation](https://docs.threatstop.com/bind9_redhat.html)  
 [NVC](https://www.nvc.co.jp)
+
