@@ -8,7 +8,7 @@ this container image built on CentOS7.
 
 ```
 $ docker build -t bind:1 .
-$ docker run -p 53:53 -d --privileged --name bind_ts bind:1 /sbin/init
+$ docker run -p 53:53/udp -d --privileged --name bind_ts bind:1 /sbin/init
 $ docker exec -it bind_ts /bin/bash
 ```
 edit /dnsfw-docker/conf.txt and change each value accoding to device settings.
