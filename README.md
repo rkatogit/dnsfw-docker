@@ -5,13 +5,13 @@ easy setup of BIND to integrate with ThreatSTOP using Docker.
 this container image built on CentOS7.
 
 ## Installation
-
+place [Dockerfile](https://github.com/rkatogit/dnsfw-docker/blob/add-new-file/Dockerfile) on your host
 ```
 $ docker build -t bind:1 .
 $ docker run -p 53:53/udp -d --privileged --name bind_ts bind:1 /sbin/init
 $ docker exec -it bind_ts /bin/bash
 ```
-edit /dnsfw-docker/conf.txt and change each value accoding to device settings.
+edit /dnsfw-docker/etc/conf.txt and change each value accoding to device settings.
 ```
 TSIGKEY="<TSIG Key name retrieved from device settings>"
 TSIGSECRET="<TSIG Key secret retrieved from device settings>"
