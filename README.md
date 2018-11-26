@@ -7,12 +7,11 @@ this container image built on CentOS7.
 ## Installation
 
 ```
-$ cd /dnsfw-docker
 $ docker build -t bind:1 .
 $ docker run -p 53:53 -d --privileged --name bind_ts bind:1 /sbin/init
 $ docker exec -it bind_ts /bin/bash
 ```
-edit conf.txt and change each value accoding to device settings.
+edit /dnsfw-docker/conf.txt and change each value accoding to device settings.
 ```
 TSIGKEY="<TSIG Key name retrieved from device settings>"
 TSIGSECRET="<TSIG Key secret retrieved from device settings>"
@@ -20,7 +19,7 @@ ZONE="<Zone name retrieved from device settings>"
 ```
 execute setup script.
 ```
-$ ./setup.sh 
+$ /dnsfw-docker/setup.sh 
 ```
 ## Usage
 use as DNS cache server(Forwarder).
