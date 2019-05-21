@@ -69,5 +69,4 @@ zone "Basic-DNSFW.rpz.threatstop.local" {
 ```
 ## Link
 [ThreatSTOP documentation](https://docs.threatstop.com/bind9_redhat.html)  
-[NVC](https://www.nvc.co.jp)
 
